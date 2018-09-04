@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+        <array key="Proxima Nova Soft Bold.ttf">
+            <string>ProximaNovaSoft-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Network Offline View Controller-->
+        <scene sceneID="fDM-Di-EWE">
+            <objects>
+                <viewController storyboardIdentifier="NetworkOfflineViewController" id="Yv5-qf-Rik" customClass="NetworkOfflineViewController" customModule="WeatherApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mq9-48-qR4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amz-HY-nwH">
+                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.086274509799999996" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="jyX-g2-Qn3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Bold" family="Proxima Nova Soft" pointSize="20"/>
+                                <state key="normal" title="Connection Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSettings:" destination="Yv5-qf-Rik" eventType="touchUpInside" id="9fb-kH-Dxt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are currently offline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea8-Na-mez">
+                                <rect key="frame" x="0.0" y="220" width="375" height="37.5"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Bold" family="Proxima Nova Soft" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noConnection" translatesAutoresizingMaskIntoConstraints="NO" id="HHp-Hg-s9m">
+                                <rect key="frame" x="147.5" y="110" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2R7-Aa-vNH"/>
+                                    <constraint firstAttribute="width" secondItem="HHp-Hg-s9m" secondAttribute="height" multiplier="1:1" id="4HN-G1-qco"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection settings and try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-GV-Ipz">
+                                <rect key="frame" x="16" y="288" width="343" height="40"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.30196078430000001" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ggr-GV-Ipz" firstAttribute="top" secondItem="Ea8-Na-mez" secondAttribute="bottom" constant="30" id="EUw-Ru-ISP"/>
+                            <constraint firstItem="HHp-Hg-s9m" firstAttribute="centerX" secondItem="Ea8-Na-mez" secondAttribute="centerX" id="HGm-QQ-gv7"/>
+                            <constraint firstItem="ggr-GV-Ipz" firstAttribute="leading" secondItem="IZv-or-Job" secondAttribute="leading" constant="16" id="Jxg-nQ-bB6"/>
+                            <constraint firstItem="Ea8-Na-mez" firstAttribute="top" secondItem="IZv-or-Job" secondAttribute="top" constant="200" id="MM7-1N-e9w"/>
+                            <constraint firstItem="Ea8-Na-mez" firstAttribute="leading" secondItem="mq9-48-qR4" secondAttribute="leading" id="Tx2-uc-La3"/>
+                            <constraint firstItem="Ea8-Na-mez" firstAttribute="top" secondItem="HHp-Hg-s9m" secondAttribute="bottom" constant="30" id="Vua-H8-b85"/>
+                            <constraint firstItem="amz-HY-nwH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ggr-GV-Ipz" secondAttribute="bottom" constant="30" id="WvS-4E-zxO"/>
+                            <constraint firstItem="Ea8-Na-mez" firstAttribute="trailing" secondItem="amz-HY-nwH" secondAttribute="trailing" id="ab6-eI-3h9"/>
+                            <constraint firstAttribute="trailing" secondItem="Ea8-Na-mez" secondAttribute="trailing" id="bFn-Id-ehP"/>
+                            <constraint firstItem="Ea8-Na-mez" firstAttribute="leading" secondItem="amz-HY-nwH" secondAttribute="leading" id="kab-ei-IMU"/>
+                            <constraint firstItem="amz-HY-nwH" firstAttribute="bottom" secondItem="IZv-or-Job" secondAttribute="bottom" id="lpo-UG-EtI"/>
+                            <constraint firstItem="IZv-or-Job" firstAttribute="trailing" secondItem="ggr-GV-Ipz" secondAttribute="trailing" constant="16" id="rny-nK-ZJv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IZv-or-Job"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageLoading" destination="HHp-Hg-s9m" id="HRa-6K-ZVp"/>
+                        <outlet property="labelOfflineSubtitle" destination="ggr-GV-Ipz" id="11g-dj-w0x"/>
+                        <outlet property="labelOfflineTitle" destination="Ea8-Na-mez" id="IKP-yI-8gH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnG-Xg-zeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471" y="543"/>
+        </scene>
+        <!--Location Off View Controller-->
+        <scene sceneID="GMl-pF-iQd">
+            <objects>
+                <viewController storyboardIdentifier="LocationOffViewController" id="UE9-nS-tQN" customClass="LocationOffViewController" customModule="WeatherApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3w4-Oc-I9e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQh-nB-V6m">
+                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.086274509799999996" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="xrl-Yn-PVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Bold" family="Proxima Nova Soft" pointSize="20"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openLocation:" destination="UE9-nS-tQN" eventType="touchUpInside" id="DIP-O3-jr0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noLocationService" translatesAutoresizingMaskIntoConstraints="NO" id="0Ef-5D-uQA">
+                                <rect key="frame" x="37.5" y="174.5" width="300" height="166.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuJ-4b-tvZ">
+                                <rect key="frame" x="16" y="448" width="343" height="79.5"/>
+                                <string key="text">Our application need your location to feed you weather data. Please enable location service in settings by selecting "Settings" button</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location service disabled?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACp-uK-csr">
+                                <rect key="frame" x="16" y="357" width="343" height="75"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Bold" family="Proxima Nova Soft" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PQh-nB-V6m" firstAttribute="leading" secondItem="3w4-Oc-I9e" secondAttribute="leading" id="22N-Ni-Woj"/>
+                            <constraint firstItem="AuJ-4b-tvZ" firstAttribute="top" secondItem="ACp-uK-csr" secondAttribute="bottom" constant="16" id="4oM-ir-Zb2"/>
+                            <constraint firstItem="0Ef-5D-uQA" firstAttribute="width" secondItem="3w4-Oc-I9e" secondAttribute="width" multiplier="0.8" id="9Sl-V0-xmY"/>
+                            <constraint firstItem="u4t-FE-hcu" firstAttribute="trailing" secondItem="ACp-uK-csr" secondAttribute="trailing" constant="16" id="CPi-Bh-pO5"/>
+                            <constraint firstItem="AuJ-4b-tvZ" firstAttribute="leading" secondItem="u4t-FE-hcu" secondAttribute="leading" constant="16" id="FbE-iL-ldv"/>
+                            <constraint firstAttribute="trailing" secondItem="PQh-nB-V6m" secondAttribute="trailing" id="MbV-Mi-g0z"/>
+                            <constraint firstItem="0Ef-5D-uQA" firstAttribute="centerX" secondItem="u4t-FE-hcu" secondAttribute="centerX" id="RlB-zP-U6P"/>
+                            <constraint firstItem="PQh-nB-V6m" firstAttribute="bottom" secondItem="u4t-FE-hcu" secondAttribute="bottom" id="Vpi-KI-yvI"/>
+                            <constraint firstItem="0Ef-5D-uQA" firstAttribute="height" secondItem="3w4-Oc-I9e" secondAttribute="height" multiplier="0.25" id="WMD-0H-OpB"/>
+                            <constraint firstItem="ACp-uK-csr" firstAttribute="top" secondItem="0Ef-5D-uQA" secondAttribute="bottom" constant="16" id="bz0-CW-Psj"/>
+                            <constraint firstItem="0Ef-5D-uQA" firstAttribute="centerY" secondItem="u4t-FE-hcu" secondAttribute="centerY" multiplier="0.75" id="fiS-vm-sA4"/>
+                            <constraint firstItem="PQh-nB-V6m" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AuJ-4b-tvZ" secondAttribute="bottom" constant="16" id="kUm-Ss-sjz"/>
+                            <constraint firstItem="ACp-uK-csr" firstAttribute="leading" secondItem="u4t-FE-hcu" secondAttribute="leading" constant="16" id="sQm-6z-rUy"/>
+                            <constraint firstItem="u4t-FE-hcu" firstAttribute="trailing" secondItem="AuJ-4b-tvZ" secondAttribute="trailing" constant="16" id="xbS-ke-VKL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u4t-FE-hcu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acT-Gr-YBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="543"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noConnection" width="50" height="50"/>
+        <image name="noLocationService" width="64" height="64"/>
+    </resources>
+</document>

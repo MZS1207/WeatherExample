@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Milos Stevanovic on 8/27/18.
+  Copyright © 2018 Milos Stevanovic. All rights reserved.
+*/
+
+"ok"    = "OK";
+"error" = "Error";

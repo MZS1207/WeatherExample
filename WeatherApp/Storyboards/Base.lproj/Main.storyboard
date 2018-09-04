@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="si4-DL-e64">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Forecast View Controller-->
+        <scene sceneID="hc7-eu-4kB">
+            <objects>
+                <viewController id="8zn-Pl-sO9" customClass="ForecastViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2c-Ai-DqU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="pc9-qS-0kK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="bph-eZ-dyL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="mTK-Z7-tuS"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Nq-bW-WC3">
+                                <rect key="frame" x="0.0" y="1" width="320" height="454"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="98" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellForecast" rowHeight="90" id="4az-hF-nVE" customClass="CellForecast" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4az-hF-nVE" id="YAz-az-7C9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mou-lc-XDQ">
+                                                    <rect key="frame" x="18" y="15" width="60" height="60"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tesImagetForecastLogo">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mou-lc-XDQ" secondAttribute="height" multiplier="1:1" id="1Pv-1m-0i2"/>
+                                                        <constraint firstAttribute="height" constant="60" id="ikK-kU-LmM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-UI-RWy">
+                                                    <rect key="frame" x="98" y="18" width="218" height="18"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="testLabelForecastTime"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="13:00">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="18" maximumLineHeight="18" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-vy-qVe">
+                                                    <rect key="frame" x="336" y="15" width="60" height="60"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="testLabelForecastTemerature"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="22°C">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.33689999999999998" green="0.58842000000000005" blue="0.95669999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="26" name="Helvetica"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQR-8z-ZCQ">
+                                                    <rect key="frame" x="98" y="44" width="218" height="18"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="testLabelForecastTitle"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Clear">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="15" maximumLineHeight="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mou-lc-XDQ" secondAttribute="bottom" constant="14.5" id="0rP-AA-vDu"/>
+                                                <constraint firstItem="AQR-8z-ZCQ" firstAttribute="centerX" secondItem="ibN-UI-RWy" secondAttribute="centerX" id="549-DV-7ic"/>
+                                                <constraint firstItem="0Ti-vy-qVe" firstAttribute="width" secondItem="mou-lc-XDQ" secondAttribute="width" id="JAm-1Y-psV"/>
+                                                <constraint firstItem="ibN-UI-RWy" firstAttribute="leading" secondItem="mou-lc-XDQ" secondAttribute="trailing" constant="20" id="JYF-YT-8HR"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Ti-vy-qVe" secondAttribute="trailing" constant="18" id="PPM-50-CuS"/>
+                                                <constraint firstItem="AQR-8z-ZCQ" firstAttribute="top" secondItem="ibN-UI-RWy" secondAttribute="bottom" constant="8" id="Qld-iS-yk6"/>
+                                                <constraint firstItem="ibN-UI-RWy" firstAttribute="centerY" secondItem="mou-lc-XDQ" secondAttribute="centerY" constant="-18" id="UQt-7h-IfW"/>
+                                                <constraint firstItem="AQR-8z-ZCQ" firstAttribute="height" secondItem="ibN-UI-RWy" secondAttribute="height" id="XTS-cR-TLw"/>
+                                                <constraint firstItem="mou-lc-XDQ" firstAttribute="top" secondItem="YAz-az-7C9" secondAttribute="top" constant="15" id="e4F-Cv-uWc"/>
+                                                <constraint firstItem="0Ti-vy-qVe" firstAttribute="centerY" secondItem="mou-lc-XDQ" secondAttribute="centerY" id="hux-U5-kBJ"/>
+                                                <constraint firstItem="AQR-8z-ZCQ" firstAttribute="width" secondItem="ibN-UI-RWy" secondAttribute="width" id="m9F-pv-aLr"/>
+                                                <constraint firstItem="mou-lc-XDQ" firstAttribute="centerY" secondItem="YAz-az-7C9" secondAttribute="centerY" id="pAD-eJ-d3B"/>
+                                                <constraint firstItem="0Ti-vy-qVe" firstAttribute="height" secondItem="mou-lc-XDQ" secondAttribute="height" id="wzG-Sv-he5"/>
+                                                <constraint firstItem="0Ti-vy-qVe" firstAttribute="leading" secondItem="ibN-UI-RWy" secondAttribute="trailing" constant="20" id="xhM-2E-NnX"/>
+                                                <constraint firstItem="mou-lc-XDQ" firstAttribute="leading" secondItem="YAz-az-7C9" secondAttribute="leading" constant="18" id="ywx-vd-14p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="imageForecastWeatherLogo" destination="mou-lc-XDQ" id="ntL-BA-hM6"/>
+                                            <outlet property="labelForecastTime" destination="ibN-UI-RWy" id="wts-DX-9XH"/>
+                                            <outlet property="labelForecastTitle" destination="AQR-8z-ZCQ" id="sZz-Qc-bx1"/>
+                                            <outlet property="lblTemperature" destination="0Ti-vy-qVe" id="sN7-ha-KqO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="testTableViewForecast"/>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pc9-qS-0kK" secondAttribute="trailing" id="DHb-d3-DX9"/>
+                            <constraint firstItem="6Nq-bW-WC3" firstAttribute="leading" secondItem="Ckd-Fz-vOn" secondAttribute="leading" id="Dk1-l8-hOR"/>
+                            <constraint firstItem="Ckd-Fz-vOn" firstAttribute="bottom" secondItem="6Nq-bW-WC3" secondAttribute="bottom" id="cXm-tO-45D"/>
+                            <constraint firstItem="6Nq-bW-WC3" firstAttribute="top" secondItem="pc9-qS-0kK" secondAttribute="bottom" id="efb-yJ-6h3"/>
+                            <constraint firstItem="Ckd-Fz-vOn" firstAttribute="trailing" secondItem="6Nq-bW-WC3" secondAttribute="trailing" id="i0S-rw-bax"/>
+                            <constraint firstItem="pc9-qS-0kK" firstAttribute="top" secondItem="Ckd-Fz-vOn" secondAttribute="top" id="mZB-Y0-RRa"/>
+                            <constraint firstItem="pc9-qS-0kK" firstAttribute="leading" secondItem="P2c-Ai-DqU" secondAttribute="leading" id="soc-xT-S7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ckd-Fz-vOn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EK5-lh-iUs"/>
+                    <connections>
+                        <outlet property="navigationItme" destination="EK5-lh-iUs" id="KLf-UY-1lB"/>
+                        <outlet property="tableView" destination="6Nq-bW-WC3" id="d1x-3j-sNj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoT-qt-Wkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="395"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="O1G-fD-gJV">
+            <objects>
+                <viewController title="Today" id="WqW-Ev-Ix1" customClass="TodayViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TodayView" id="3VV-JM-e0I" customClass="TodayView" customModule="WeatherApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="et2-xN-pfl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="EwD-w5-Yrd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-N3-Z12">
+                                <rect key="frame" x="110" y="31" width="100" height="100.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testImageWeatherLogo">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2DQ-N3-Z12" secondAttribute="height" multiplier="1:1" id="KgR-6j-MYA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currentLocation" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-KT-dgo">
+                                <rect key="frame" x="40.5" y="156.5" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lnS-KT-dgo" secondAttribute="height" multiplier="1:1" id="ZVa-PR-zZv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udG-Vl-fHc">
+                                <rect key="frame" x="85.5" y="183.5" width="150" height="25"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testLabelTemperatureWeather"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="LrG-YI-wjP"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="22°C |  Sunny">
+                                        <attributes>
+                                            <color key="NSColor" red="0.33689999999999998" green="0.58842000000000005" blue="0.95669999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="Helvetica"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prague, Czech Republic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aB-MG-K0q">
+                                <rect key="frame" x="57.5" y="151.5" width="206" height="22"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testLabelCityName"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="L8c-D8-Yi6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgL-yx-U1h">
+                                <rect key="frame" x="138.5" y="405" width="43" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testShareButton"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="1" green="0.80784313725490198" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionShareWeather:" destination="WqW-Ev-Ix1" eventType="touchUpInside" id="ZQp-Dt-qd9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" image="devider" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-Sx-nGn">
+                                <rect key="frame" x="103.5" y="384" width="112" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="DTQ-pN-Hif"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windDay" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-A2-WcS">
+                                <rect key="frame" x="81" y="314.5" width="30" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testImageWind">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bMn-A2-WcS" secondAttribute="height" multiplier="1:1" id="Z6c-iw-9Qi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windDirectionDay" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-1V-sxy">
+                                <rect key="frame" x="209" y="314.5" width="30" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testImageDirectionWind">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Abp-1V-sxy" secondAttribute="height" multiplier="1:1" id="uUS-Gf-P6o"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="20 km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-u1-XTo">
+                                <rect key="frame" x="72.5" y="352.5" width="46.5" height="14.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testLabelWind"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU9-sh-fDz">
+                                <rect key="frame" x="216.5" y="353" width="15" height="14.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testLabelDirection"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="precipitationOther" translatesAutoresizingMaskIntoConstraints="NO" id="mu6-WS-iiY">
+                                <rect key="frame" x="145" y="249.5" width="30" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testImagePrecipation">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mu6-WS-iiY" secondAttribute="height" multiplier="1:1" id="na9-i3-kyo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-OX-CTk">
+                                <rect key="frame" x="142" y="287.5" width="37" height="14.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testPrecipationLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pressureOther" translatesAutoresizingMaskIntoConstraints="NO" id="HFd-84-t5P">
+                                <rect key="frame" x="240.5" y="249.5" width="30" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testImagePressure">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1019 hPa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hP7-hR-a7f">
+                                <rect key="frame" x="230" y="287.5" width="51" height="15"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testPressureLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidityOther" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-xD-aOv">
+                                <rect key="frame" x="33.5" y="249.5" width="30" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testImageHumadity">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ffW-xD-aOv" secondAttribute="height" multiplier="1:1" id="UZ3-k0-26z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="57%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gP-gN-Tll">
+                                <rect key="frame" x="36.5" y="287.5" width="24" height="15"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testHumidityLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devider" translatesAutoresizingMaskIntoConstraints="NO" id="4WD-65-ElU">
+                                <rect key="frame" x="103.5" y="228.5" width="112.5" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="diy-Me-2an"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ffW-xD-aOv" firstAttribute="width" secondItem="3VV-JM-e0I" secondAttribute="width" multiplier="0.095" id="0pr-xE-R1b"/>
+                            <constraint firstItem="HFd-84-t5P" firstAttribute="width" secondItem="HFd-84-t5P" secondAttribute="height" multiplier="1:1" id="0ta-MP-wUU"/>
+                            <constraint firstItem="hP7-hR-a7f" firstAttribute="top" secondItem="HFd-84-t5P" secondAttribute="bottom" constant="8" id="1T6-FA-weK"/>
+                            <constraint firstItem="4WD-65-ElU" firstAttribute="height" secondItem="Bap-Sx-nGn" secondAttribute="height" id="3sm-Yg-t7I"/>
+                            <constraint firstItem="bdX-OX-CTk" firstAttribute="centerX" secondItem="mu6-WS-iiY" secondAttribute="centerX" id="4aG-PE-idT"/>
+                            <constraint firstItem="4WD-65-ElU" firstAttribute="width" secondItem="Bap-Sx-nGn" secondAttribute="width" id="5xo-aN-46D"/>
+                            <constraint firstItem="Bap-Sx-nGn" firstAttribute="firstBaseline" secondItem="dhV-u1-XTo" secondAttribute="baseline" constant="20" id="6dP-TC-rWP"/>
+                            <constraint firstItem="Abp-1V-sxy" firstAttribute="centerY" secondItem="bMn-A2-WcS" secondAttribute="centerY" id="7NF-vK-bsc"/>
+                            <constraint firstItem="2DQ-N3-Z12" firstAttribute="top" secondItem="et2-xN-pfl" secondAttribute="bottom" constant="30" id="8E3-kz-ctV"/>
+                            <constraint firstItem="hP7-hR-a7f" firstAttribute="centerX" secondItem="HFd-84-t5P" secondAttribute="centerX" id="8Mr-DD-c61"/>
+                            <constraint firstItem="HFd-84-t5P" firstAttribute="centerX" secondItem="Bap-Sx-nGn" secondAttribute="centerX" multiplier="1.6" id="9ht-Gx-Wbs"/>
+                            <constraint firstItem="bMn-A2-WcS" firstAttribute="height" secondItem="ffW-xD-aOv" secondAttribute="height" id="A2C-7P-3Zj"/>
+                            <constraint firstItem="2gP-gN-Tll" firstAttribute="top" secondItem="ffW-xD-aOv" secondAttribute="bottom" constant="8" id="Cpa-18-3dT"/>
+                            <constraint firstItem="0aB-MG-K0q" firstAttribute="centerX" secondItem="2DQ-N3-Z12" secondAttribute="centerX" id="DKY-pW-60y"/>
+                            <constraint firstItem="aU9-sh-fDz" firstAttribute="centerX" secondItem="Abp-1V-sxy" secondAttribute="centerX" id="KhF-M8-bkC"/>
+                            <constraint firstItem="mu6-WS-iiY" firstAttribute="height" secondItem="ffW-xD-aOv" secondAttribute="height" id="Knc-2N-exb"/>
+                            <constraint firstItem="2gP-gN-Tll" firstAttribute="top" secondItem="ffW-xD-aOv" secondAttribute="bottom" constant="8" id="NLX-OP-MRT"/>
+                            <constraint firstItem="EBc-XJ-1Nm" firstAttribute="trailing" secondItem="et2-xN-pfl" secondAttribute="trailing" id="Q4j-X1-hHn"/>
+                            <constraint firstItem="2DQ-N3-Z12" firstAttribute="centerX" secondItem="EBc-XJ-1Nm" secondAttribute="centerX" id="RgD-dd-kwO"/>
+                            <constraint firstItem="tgL-yx-U1h" firstAttribute="centerX" secondItem="EBc-XJ-1Nm" secondAttribute="centerX" id="T8M-go-oT5"/>
+                            <constraint firstItem="dhV-u1-XTo" firstAttribute="top" secondItem="bMn-A2-WcS" secondAttribute="bottom" constant="8" id="TSt-gP-K6U"/>
+                            <constraint firstItem="mu6-WS-iiY" firstAttribute="top" secondItem="4WD-65-ElU" secondAttribute="bottom" constant="20" id="VQ0-d6-k2f"/>
+                            <constraint firstItem="bdX-OX-CTk" firstAttribute="top" secondItem="mu6-WS-iiY" secondAttribute="bottom" constant="8" id="WI6-72-yjG"/>
+                            <constraint firstItem="bMn-A2-WcS" firstAttribute="centerX" secondItem="Bap-Sx-nGn" secondAttribute="centerX" multiplier="0.6" id="XKm-aA-qpc"/>
+                            <constraint firstItem="mu6-WS-iiY" firstAttribute="centerX" secondItem="Bap-Sx-nGn" secondAttribute="centerX" id="XlA-rG-5so"/>
+                            <constraint firstItem="Abp-1V-sxy" firstAttribute="centerX" secondItem="EBc-XJ-1Nm" secondAttribute="centerX" multiplier="1.4" id="YxO-ji-59s"/>
+                            <constraint firstItem="tgL-yx-U1h" firstAttribute="height" secondItem="3VV-JM-e0I" secondAttribute="height" multiplier="0.06" id="Z8d-co-9N2"/>
+                            <constraint firstItem="2DQ-N3-Z12" firstAttribute="width" secondItem="3VV-JM-e0I" secondAttribute="width" multiplier="0.312" id="bmf-fV-lMW"/>
+                            <constraint firstItem="2gP-gN-Tll" firstAttribute="centerX" secondItem="ffW-xD-aOv" secondAttribute="centerX" id="cNP-1M-OOH"/>
+                            <constraint firstItem="et2-xN-pfl" firstAttribute="top" secondItem="EBc-XJ-1Nm" secondAttribute="top" id="e2V-Qd-Jrs"/>
+                            <constraint firstItem="HFd-84-t5P" firstAttribute="centerY" secondItem="mu6-WS-iiY" secondAttribute="centerY" id="ecl-T5-bkK"/>
+                            <constraint firstItem="mu6-WS-iiY" firstAttribute="centerY" secondItem="bMn-A2-WcS" secondAttribute="centerY" constant="-65" id="epz-dK-uXB"/>
+                            <constraint firstItem="dhV-u1-XTo" firstAttribute="centerX" secondItem="bMn-A2-WcS" secondAttribute="centerX" id="f65-kk-Btd"/>
+                            <constraint firstItem="4WD-65-ElU" firstAttribute="centerX" secondItem="Bap-Sx-nGn" secondAttribute="centerX" id="fDa-GQ-fOj"/>
+                            <constraint firstItem="et2-xN-pfl" firstAttribute="leading" secondItem="EBc-XJ-1Nm" secondAttribute="leading" id="g45-2p-Y4r"/>
+                            <constraint firstItem="ffW-xD-aOv" firstAttribute="centerY" secondItem="mu6-WS-iiY" secondAttribute="centerY" id="hJz-xb-gHo"/>
+                            <constraint firstItem="0aB-MG-K0q" firstAttribute="leading" secondItem="lnS-KT-dgo" secondAttribute="trailing" constant="5" id="hzb-IB-Lyh"/>
+                            <constraint firstItem="tgL-yx-U1h" firstAttribute="top" secondItem="Bap-Sx-nGn" secondAttribute="bottom" constant="20" id="joJ-na-2QF"/>
+                            <constraint firstItem="EBc-XJ-1Nm" firstAttribute="bottom" secondItem="tgL-yx-U1h" secondAttribute="bottom" constant="20" id="lec-mZ-5Fu"/>
+                            <constraint firstItem="Bap-Sx-nGn" firstAttribute="width" secondItem="3VV-JM-e0I" secondAttribute="width" multiplier="0.35" id="lyI-Vc-msh"/>
+                            <constraint firstItem="hP7-hR-a7f" firstAttribute="top" secondItem="HFd-84-t5P" secondAttribute="bottom" constant="8" id="mW5-S1-rSY"/>
+                            <constraint firstItem="udG-Vl-fHc" firstAttribute="centerX" secondItem="0aB-MG-K0q" secondAttribute="centerX" id="n0C-Ne-jfp"/>
+                            <constraint firstItem="lnS-KT-dgo" firstAttribute="centerY" secondItem="0aB-MG-K0q" secondAttribute="centerY" id="pst-FJ-XqC"/>
+                            <constraint firstItem="ffW-xD-aOv" firstAttribute="centerX" secondItem="Bap-Sx-nGn" secondAttribute="centerX" multiplier="0.3" id="qfg-10-4Qf"/>
+                            <constraint firstItem="udG-Vl-fHc" firstAttribute="top" secondItem="0aB-MG-K0q" secondAttribute="bottom" constant="10" id="s6E-DY-UIJ"/>
+                            <constraint firstItem="aU9-sh-fDz" firstAttribute="centerY" secondItem="dhV-u1-XTo" secondAttribute="centerY" id="urR-qd-paF"/>
+                            <constraint firstItem="Bap-Sx-nGn" firstAttribute="centerX" secondItem="tgL-yx-U1h" secondAttribute="centerX" id="uyk-aY-edW"/>
+                            <constraint firstItem="HFd-84-t5P" firstAttribute="height" secondItem="ffW-xD-aOv" secondAttribute="height" id="vYS-Pu-wqv"/>
+                            <constraint firstItem="4WD-65-ElU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="udG-Vl-fHc" secondAttribute="bottom" constant="20" id="wK0-am-f5Q"/>
+                            <constraint firstItem="lnS-KT-dgo" firstAttribute="height" secondItem="0aB-MG-K0q" secondAttribute="height" constant="-10" id="xE2-Ez-MGm"/>
+                            <constraint firstItem="0aB-MG-K0q" firstAttribute="top" secondItem="2DQ-N3-Z12" secondAttribute="bottom" constant="20" id="xcm-K8-KOf"/>
+                            <constraint firstItem="Abp-1V-sxy" firstAttribute="height" secondItem="bMn-A2-WcS" secondAttribute="height" id="yeQ-k0-40Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EBc-XJ-1Nm"/>
+                        <connections>
+                            <outlet property="imageDirectionOfWind" destination="Abp-1V-sxy" id="Pb8-hc-Ukh"/>
+                            <outlet property="imageHumidity" destination="ffW-xD-aOv" id="bSy-9P-hLv"/>
+                            <outlet property="imagePrecipitation" destination="mu6-WS-iiY" id="HtO-Pu-Von"/>
+                            <outlet property="imagePressureOther" destination="HFd-84-t5P" id="pN9-i8-kJ8"/>
+                            <outlet property="imageWeatherLogo" destination="2DQ-N3-Z12" id="rn6-wU-VLr"/>
+                            <outlet property="imageWind" destination="bMn-A2-WcS" id="WcK-QP-WWh"/>
+                            <outlet property="labelCityName" destination="0aB-MG-K0q" id="nK6-HW-3CY"/>
+                            <outlet property="labelDirection" destination="aU9-sh-fDz" id="cUN-tZ-lk3"/>
+                            <outlet property="labelHumidity" destination="2gP-gN-Tll" id="fsH-8R-Fur"/>
+                            <outlet property="labelPrecipitation" destination="bdX-OX-CTk" id="5P5-H5-T4R"/>
+                            <outlet property="labelPresure" destination="hP7-hR-a7f" id="m6z-A3-lZ4"/>
+                            <outlet property="labelTemperatureAndWeatherDescription" destination="udG-Vl-fHc" id="lPJ-RS-d2m"/>
+                            <outlet property="labelWind" destination="dhV-u1-XTo" id="zBE-bb-HMr"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Today" id="OiB-cq-i6g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwd-4e-CXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="-424"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SBh-zQ-yon">
+            <objects>
+                <tabBarController id="si4-DL-e64" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGX-tX-dF9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="testTabItemForecast" value=""/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="Hmw-ke-Rhf" kind="relationship" relationship="viewControllers" id="cNV-1K-lnT"/>
+                        <segue destination="dIB-Md-0ad" kind="relationship" relationship="viewControllers" id="3A7-ay-BRH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0t-88-ZSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007" y="-90"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="n0N-ST-6cm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hmw-ke-Rhf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Today" image="tabbarTodayInactive" selectedImage="tabbarTodayActive" id="B58-8j-8qG">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="testTabItemToday"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Es1-ne-s9m">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WqW-Ev-Ix1" kind="relationship" relationship="rootViewController" id="eWa-uV-n4Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBd-5r-vBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="-424"/>
+        </scene>
+        <!--Forecast-->
+        <scene sceneID="YNd-LU-G5v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dIB-Md-0ad" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Forecast" image="tabbarForecatInactive" selectedImage="tabbarForecastActive" id="l2m-kg-D1J">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="testTabItemForecast"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="arG-5L-vt8">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8zn-Pl-sO9" kind="relationship" relationship="rootViewController" id="xpu-Fs-WE5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxJ-Nt-yCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="404"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Line" width="320" height="2"/>
+        <image name="currentLocation" width="12" height="12"/>
+        <image name="devider" width="110" height="1"/>
+        <image name="humidityOther" width="30" height="30"/>
+        <image name="precipitationOther" width="30" height="30"/>
+        <image name="pressureOther" width="30" height="30"/>
+        <image name="tabbarForecastActive" width="25" height="25"/>
+        <image name="tabbarForecatInactive" width="25" height="25"/>
+        <image name="tabbarTodayActive" width="25" height="25"/>
+        <image name="tabbarTodayInactive" width="25" height="25"/>
+        <image name="windDay" width="30" height="30"/>
+        <image name="windDirectionDay" width="30" height="30"/>
+    </resources>
+</document>
