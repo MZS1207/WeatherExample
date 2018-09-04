@@ -654,7 +654,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherApp/Loaction/CoreLocationManager.swift"
-            timestampString = "557736027.752996"
+            timestampString = "557738049.014129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -670,7 +670,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherApp/Loaction/CoreLocationManager.swift"
-            timestampString = "557736027.7530611"
+            timestampString = "557738049.0145431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -686,7 +686,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherApp/Loaction/CoreLocationManager.swift"
-            timestampString = "557736027.7531199"
+            timestampString = "557738049.014784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -709,38 +709,6 @@
             endingLineNumber = "57"
             landmarkName = "setupCallbacks()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WeatherApp.TodayViewController.(setupCallbacks in _0AEB06C13AFA810ED07A19791A074878)() -&gt; ()"
-                  moduleName = "WeatherApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/milosstevanovic/Desktop/WeatherTestApp/WeatherApp/Scene/Today/View/TodayViewController.swift"
-                  timestampString = "557732223.571506"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (WeatherApp.LocationModel) -&gt; () in WeatherApp.TodayViewController.(setupCallbacks in _0AEB06C13AFA810ED07A19791A074878)() -&gt; ()"
-                  moduleName = "WeatherApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/milosstevanovic/Desktop/WeatherTestApp/WeatherApp/Scene/Today/View/TodayViewController.swift"
-                  timestampString = "557732223.573701"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
