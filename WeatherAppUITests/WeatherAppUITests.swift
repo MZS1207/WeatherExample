@@ -24,11 +24,6 @@ class WeatherAppUITests: XCTestCase {
     }
     func testWorkflow() {
         app.launch()
-        
-        let shareButton = app.buttons[UIElementTestIdentifiers.testShareButton.description]
-        XCTAssertNotNil(shareButton)
-        shareButton.tap()
-        
         let tabBarItemForecast =
         app.tabBars.buttons["Forecast"]
         XCTAssertNotNil(tabBarItemForecast)
